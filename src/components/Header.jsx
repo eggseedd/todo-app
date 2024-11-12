@@ -1,6 +1,6 @@
 export function Header(props) {
     const { todos } = props
-    const todosLength = todos.length
+    const todosLength = todos.filter(val => !val.complete).length
 
     const isTaskPlural = todosLength > 1
     const taskOrTasks = isTaskPlural ? 'tasks' : 'task'
